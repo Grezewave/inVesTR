@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Investments</title>
+</head>
+<body>
+    <h1>Investments</h1>
+
+    <!-- Form Section -->
+    <div id="add-form-section">
+        <h2>Add Investment</h2>
+        <form id="add-investment-form" method="post">
+            {% csrf_token %}
+            <!-- Form fields here -->
+            {{ form.as_p }}  <!-- Display the form fields -->
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+    <!-- List Section -->
+    <div id="list-section">
+        <h2>List of Investments</h2>
+        {% if investments %}
+        <ul id="investment-list">
+            {% for investment in investments %}
+            <li>{{ investment.investment_code }} - {{ investment.current_value }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No investments found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
