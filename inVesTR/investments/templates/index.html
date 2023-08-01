@@ -1,34 +1,57 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Investments</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
     <h1>Investments</h1>
+    <div id="content">
 
-    <!-- Form Section -->
-    <div id="add-form-section">
-        <h2>Add Investment</h2>
-        <form id="add-investment-form" method="post">
-            {% csrf_token %}
-            <!-- Form fields here -->
-            {{ form.as_p }}  <!-- Display the form fields -->
-            <button type="submit">Save</button>
-        </form>
-    </div>
+        <!-- Form Section -->
+        <div id="add-form-section">
+            <div class="element-header">
+                <h2>Add Investment</h2>
+            </div>
+            <form id="add-investment-form" method="post">
+                {% csrf_token %}
+                <!-- Form fields here -->
+                {{ form.as_p }}  <!-- Display the form fields -->
+                <button type="submit">Save</button>
+            </form>
+        </div>
 
-    <!-- List Section -->
-    <div id="list-section">
-        <h2>List of Investments</h2>
-        {% if investments %}
-        <ul id="investment-list">
-            {% for investment in investments %}
-            <li>{{ investment.investment_code }} - {{ investment.current_value }}</li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>No investments found.</p>
-        {% endif %}
+        <!-- List Section -->
+        <div id="list-section">
+            <div class="element-header">
+                <h2>List of Investments</h2>
+            </div>
+            {% if investments %}
+            <table id="investment-table">
+                <thead>
+                    <tr>
+                        <th>Investment Code</th>
+                        <th>Current Value</th>
+                        <th>Updated At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for investment in investments %}
+                    <tr>
+                        <td>{{ investment.investment_code }}</td>
+                        <td>{{ investment.current_value }}</td>
+                        <td>{{ investment.updated_at }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            {% else %}
+            <p>No investments found.</p>
+            {% endif %}
+        </div>
     </div>
 </body>
 </html>

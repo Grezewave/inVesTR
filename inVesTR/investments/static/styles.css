@@ -1,0 +1,121 @@
+/* Reset default margin and padding */
+body, h1, h2, form, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a lighter pink background */
+body {
+    background-color: #FCE9F2;
+    font-family: "Arial", sans-serif;
+}
+
+/* Apply box shadow and border radius to the main content */
+#content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFF5FA; /* Ajustando para um rosa mais claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Adicionando o border radius */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the h1 and h2 headings */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the form section */
+#add-form-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+/* Style form fields */
+#add-investment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#add-investment-form {
+    width: 60%;
+}
+
+#add-investment-form label {
+    width: 200px;
+    padding-right: 10px;
+}
+
+#add-investment-form p {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-investment-form input {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#add-investment-form input[type="text"],
+#add-investment-form input[type="number"],
+#add-investment-form select {
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style the submit button */
+#add-investment-form button {
+    border-radius: 8px;
+    width: 100px;
+    align-self: center;
+    height: 30px;
+    background-color: #FCB0EC;
+    margin-top: 20px;
+}
+
+/* ... Seus estilos CSS existentes ... */
+#list-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Estilos para a tabela */
+#investment-table {
+    width: 100%;
+    border-collapse: collapse; /* Mesclar bordas de células */
+    margin: 20px 30px;
+    width: 70%;
+    padding: 10px;
+    border-spacing: 30px 30px;
+}
+
+#investment-table th,
+#investment-table td {
+    padding: 10px;
+    text-align: left;
+    padding-left: 40px;
+    border-bottom: 1px solid #DDD;
+}
+
+/* Estilizando o cabeçalho da tabela */
+#investment-table th {
+    background-color: #FCE9F2; /* Mesma cor de fundo do conteúdo */
+}
+
+/* Estilizando as células pares do corpo da tabela */
+#investment-table tbody tr:nth-child(even) {
+    background-color: #FCE0EC; /* Tom de rosa claro */
+}
+
+/* ... Seus estilos CSS existentes ... */
