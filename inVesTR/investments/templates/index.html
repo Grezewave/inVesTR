@@ -1,12 +1,6 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Investments</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-</head>
-<body>
+{% block content %}
     <h1>Investments</h1>
     <div id="content">
 
@@ -35,7 +29,7 @@
                         <th>Investment Code</th>
                         <th>Current Value</th>
                         <th>Updated At</th>
-                    </tr>
+                        <th>Action</th>                        
                 </thead>
                 <tbody>
                     {% for investment in investments %}
@@ -43,6 +37,11 @@
                         <td>{{ investment.investment_code }}</td>
                         <td>{{ investment.current_value }}</td>
                         <td>{{ investment.updated_at }}</td>
+                        <td>
+                            <a href="{% url 'delete_investment' investment.pk %}">Delete</a>
+                            <a href="{% url 'update_investment' investment.pk %}">Update</a>
+                        </td>  <!-- Botão de delete com link para a view de deleção -->
+                    </tr>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -53,5 +52,5 @@
             {% endif %}
         </div>
     </div>
-</body>
-</html>
+
+{% endblock %}
