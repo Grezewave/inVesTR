@@ -8,4 +8,6 @@ urlpatterns = [
          name='delete_investment'),  # URL para a view de deleção
     path('update/<int:pk>/', views.update_investment,
          name='update_investment'),
+    path('investment/<int:pk>/chart/',
+         views.investment_chart, name='investment_chart'),
 ]

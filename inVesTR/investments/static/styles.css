@@ -186,3 +186,8 @@ h1, h2 {
     margin-top: 20px;
     align-self: center; /* Center the button horizontally */
 }
+
+#investment-table-actions {
+    display: flex;
+    flex-direction: row;
+}

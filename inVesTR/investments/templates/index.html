@@ -30,6 +30,8 @@
                         <th>Institution</th>
                         <th>Current Value</th>
                         <th>Updated At</th>
+                        <th>Last Profit (%)</th>
+                        <th>Total Profit (%)</th>
                         <th>Action</th>                        
                 </thead>
                 <tbody>
@@ -39,12 +41,18 @@
                         <td>{{ investment.institution }}</td>
                         <td>{{ investment.current_value }}</td>
                         <td>{{ investment.updated_at }}</td>
+                        <td>{{ investment.last_profit|default:"N/A" }}</td>
+                        <td>{{ investment.total_profit|default:"N/A" }}</td>
                         <td>
+                            <div id='investment-table-actions'>
                             <a href="{% url 'delete_investment' investment.pk %}">
                                 <span class="material-icons">delete</span>
                             </a>
                             <a href="{% url 'update_investment' investment.pk %}">
                                 <span class="material-icons">update</span>
+                            </a>
+                            <a href="{% url 'investment_chart' investment.pk %}" target="_blank">
+                                <span class="material-icons">show_chart</span>
                             </a>
                         </td>  <!-- Botão de delete com link para a view de deleção -->
                     </tr>
