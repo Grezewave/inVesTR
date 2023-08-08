@@ -1,24 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Edit Investment</h2>
-    
-    <form id="edit-investment-form" method="post">
-        {% csrf_token %}
-        {{ form.non_field_errors }}
-        <div class="fieldWrapper">
-            <label for="{{ form.investment_code.id_for_label }}">Investment Code:</label>
-            {{ investment.investment_code }}
+    <div id="content">
+        <h2>Edit Investment</h2>
+
+        <div id="edit-form-section">
+        
+            <form id="edit-investment-form" method="post">
+                <div id = "form-content" />
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="fieldWrapper">
+                        <p><label for="{{ form.investment_code.id_for_label }}">Investment Code:</label></p>
+                        <p><label for="{{ form.institution.id_for_label }}">Institution:</label></p>
+                        <p><label for="{{ form.current_value.id_for_label }}">Current value:</label></p>
+                    </div>
+                    <div class="formWrapper">
+                        <p>{{ investment.investment_code }}</p>
+                        <p>{{ investment.institution }}</p>
+                        {{ form.current_value }}
+                    </div>
+                </div>
+                <button type="submit">Save Changes</button>
+            </form>
+        
         </div>
-        <div class="fieldWrapper">
-            <label for="{{ form.institution.id_for_label }}">Institution:</label>
-            {{ investment.institution }}
-        </div>
-        <div class="fieldWrapper">
-            <label for="{{ form.current_value.id_for_label }}">Current value:</label>
-            {{ form.current_value }}
-        </div>
-        <!-- Add other fields as needed -->
-        <button type="submit">Save Changes</button>
-    </form>
+    </div>
 {% endblock %}

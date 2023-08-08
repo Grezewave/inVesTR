@@ -92,10 +92,9 @@ h1, h2 {
 }
 /* Estilos para a tabela */
 #investment-table {
-    width: 100%;
     border-collapse: collapse; /* Mesclar bordas de células */
     margin: 20px 30px;
-    width: 70%;
+    width: 90%;
     padding: 10px;
     border-spacing: 30px 30px;
 }
@@ -118,4 +117,72 @@ h1, h2 {
     background-color: #FCE0EC; /* Tom de rosa claro */
 }
 
-/* ... Seus estilos CSS existentes ... */
+#edit-form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style form fields */
+#edit-investment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#form-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.fieldWrapper,
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    width: 400px;
+}
+
+.fieldWrapper {
+    align-items: flex-end;
+    padding-right: 10px;
+}
+
+#edit-investment-form label {
+    padding-right: 10px;
+}
+
+#edit-investment-form p {
+    display: flex;
+    flex-direction: column;
+}
+
+#edit-investment-form input {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#edit-investment-form input[type="text"],
+#edit-investment-form input[type="number"],
+#edit-investment-form select {
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style the submit button */
+#edit-investment-form button {
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+    background-color: #FCB0EC;
+    margin-top: 20px;
+    align-self: center; /* Center the button horizontally */
+}
