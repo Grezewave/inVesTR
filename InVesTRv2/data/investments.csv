@@ -1,4 +1,4 @@
-id,investment_name,investment_value,investment_date
+bank,investment_name,investment_value,investment_date
 Stocks,Stocks,1000,2022-01-01
 Treasury Direct,Treasury Direct,5000,2022-02-15
 Savings Account,Savings Account,2000,2022-03-10
