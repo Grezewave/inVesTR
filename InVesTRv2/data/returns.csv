@@ -1,0 +1,21 @@
+id,investment_name,total_amount,date_received
+1,Stocks,1050,2022-01-10
+2,Treasury Direct,1100,2022-02-25
+3,Savings Account,1130,2022-03-20
+4,Stocks,1210,2022-04-05
+5,Treasury Direct,1330,2022-05-01
+6,Stocks,2050,2022-01-15
+7,Treasury Direct,3200,2022-02-28
+8,Real Estate,4000,2022-03-25
+9,Stocks,5000,2022-04-10
+10,Treasury Direct,1650,2022-05-15
+11,Real Estate,7000,2022-06-20
+12,Stocks,4000,2022-07-10
+13,Treasury Direct,5000,2022-08-25
+14,Cryptocurrency,2300,2022-09-30
+15,Real Estate,3300,2022-10-20
+16,Stocks,1400,2022-04-15
+17,Treasury Direct,1550,2022-05-20
+18,Savings Account,1630,2022-06-05
+19,Stocks,1750,2022-07-15
+20,Treasury Direct,1930,2022-08-01
